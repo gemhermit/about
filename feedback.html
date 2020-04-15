@@ -37,21 +37,23 @@
     </div>
   </nav>
 </header>
-<main>
+<main class="container">
   <br>
   <br>
-  <div class="row container">
+  <div class="row ">
     <form class="col s12">
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field">
           <textarea id="first" placeholder="清晰的描述问题有助于我们及时改进"  class="materialize-textarea"></textarea>
              <label for="first">问题/建议描述</label>
         </div>
       </div>
     </form>
   </div>
-  <form action="#">
-    <div class="file-field input-field  container">
+          <label for="contact">联系方式</label> 
+              <input id="contact" class="validate" placeholder="输入您的邮箱/手机号">
+      <form action="#">
+    <div class="file-field input-field">
       <div class="btn">
         <span>添加附件</span>
         <input type="file" multiple>
@@ -60,23 +62,14 @@
         <input class="file-path validate" type="text" placeholder="支持上传多个文件">
       </div>
     </div>
-  </form>
-  <div class="input-field col s12">   
-    <select>
-      <option value=""disabled selected>选择描述的产品</option>
-      <option value="游戏">贝谷游戏</option>
-      <option value="云">贝谷云服务</option>
-      <option value="内容">贝谷内容服务</option>
-      <option value="基础">贝谷基础服务</option>
-      <option value="学振">学振</option>
-    </select>
-    <label>产品选择</label>
-          </div>
-              <input id="contact" class="validate">
-          <label for="contact">联系方式</label> 
-          <a class="btn" onclick="Materialize.toast('您的问题建议已提交，感谢您的反馈', 1800,'',function(){location.reload()})">提交反馈 </a>    
+  </form>      
+          <br>
+          <a class="waves-effect waves-light btn-large" onclick="Materialize.toast('您的问题建议已提交，感谢您的反馈', 1800,'',function(){location.reload()})">提交反馈 </a>    
       
   </main>
+  <br>
+  <br>
+  <br>
   
           <footer class="page-footer blue">
           <div class="container">
@@ -107,7 +100,7 @@
         </footer>
                  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-
+      <script type="text/javascript" src="js/new.js"></script>
         </body>
         </html>
   

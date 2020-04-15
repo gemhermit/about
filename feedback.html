@@ -38,26 +38,30 @@
   </nav>
 </header>
 <main>
+  <br>
+  <br>
   <div class="row container">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          
-          <label for="textarea1">问题/建议描述</label>
+          <textarea id="first" placeholder="清晰的描述问题有助于我们及时改进"  class="materialize-textarea"></textarea>
+             <label for="first">问题/建议描述</label>
         </div>
-          <form action="#">
-            <div class="file-field input-field">
-              <div class="btn">
-                <span>添加附件</span>
-                <input type="file" multiple>
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="支持上传多个文件">
-              </div>
-            </div>
-          </form>
-          <div class="input-field col s12">   
+      </div>
+    </form>
+  </div>
+  <form action="#">
+    <div class="file-field input-field  container">
+      <div class="btn">
+        <span>添加附件</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="支持上传多个文件">
+      </div>
+    </div>
+  </form>
+  <div class="input-field col s12">   
     <select>
       <option value=""disabled selected>选择描述的产品</option>
       <option value="游戏">贝谷游戏</option>
@@ -71,12 +75,8 @@
               <input id="contact" class="validate">
           <label for="contact">联系方式</label> 
           <a class="btn" onclick="Materialize.toast('您的问题建议已提交，感谢您的反馈', 1800,'',function(){location.reload()})">提交反馈 </a>    
-      </div>
-    </form>
-  </div>
+      
   </main>
-  <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
-  
   
           <footer class="page-footer blue">
           <div class="container">

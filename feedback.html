@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>贝谷</title>
+  <title>意见反馈-贝谷</title>
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -21,7 +21,7 @@
   <meta name="HandheldFriendly" content="True">
    </head> 
     <body>
-
+<header>
   <nav class="blue">
     <div class="nav-wrapper blue container">
 
@@ -36,21 +36,30 @@
       </ul>
     </div>
   </nav>
-  <div class="row">
+</header>
+<main>
+  <div class="row container">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
           <textarea id="textarea1" class="materialize-textarea"></textarea>
           
           <label for="textarea1">问题/建议描述</label>
-          <div class="btn">
-        <span>添加附件</span>
-        <input type="file" multiple>
-      </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text" placeholder="支持上传多个文件">
+        </div>
+          <form action="#">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>添加附件</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="支持上传多个文件">
+              </div>
+            </div>
+          </form>
+          <div class="input-field col s12">   
     <select>
-      <option value="" 选择描述的产品</option>
+      <option value=""disabled selected>选择描述的产品</option>
       <option value="游戏">贝谷游戏</option>
       <option value="云">贝谷云服务</option>
       <option value="内容">贝谷内容服务</option>
@@ -58,16 +67,15 @@
       <option value="学振">学振</option>
     </select>
     <label>产品选择</label>
+          </div>
               <input id="contact" class="validate">
           <label for="contact">联系方式</label> 
-          <button class="btn waves-effect waves-light" type="submit" onclick="Materialize.toast('您的问题建议已提交，感谢您的反馈', 4000'',function(){location.reload();}))" name="action">提交反馈
-  </button>
-        </div>
+          <a class="btn" onclick="Materialize.toast('您的问题建议已提交，感谢您的反馈', 1800,'',function(){location.reload()})">提交反馈 </a>    
       </div>
     </form>
   </div>
-  
-  
+  </main>
+  <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
   
   
           <footer class="page-footer blue">
@@ -99,38 +107,7 @@
         </footer>
                  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script>
-SendEMail('','');
-/*
-**infor: 要发送的邮件信息
-**subject: 要发送的邮件主题
-*/
-function SendEMail(infor, subject)
-{
-var jMail = new ActiveXObject("Jmail.message");
-jMail.Silent = true;
-jMail.Charset = "utf-8";
-jMail.FromName = contact//发件人
-jMail.From = "service@bago.ink"; //发送人的邮件地址
-jMail.AddRecipient("xizhe.official@gmail.com"); //收件人的邮件地址
-// jMail.Subject = subject;
-// jMail.Body = infor;
-jMail.Subject = "反馈"+infor;
-jMail.Body = subject;
-jMail.MailServerUserName="service@bago.ink";//发送人的邮件地址
-jMail.MailServerPassWord="realxizhe2020"; //邮箱密码
-var ret = jMail.Send("stmp.qiye.aliyun.com"); //发信服务器
-if(ret == false)
-{
-alert("fail");
-}
-else
-{
-alert("success");
-}
-jMail.Close();
-}
-</script>
+
         </body>
         </html>
   

@@ -1,11 +1,11 @@
 {
-    "name": "about",
-    "short_name": "about",
+    "name": "贝谷 - 人工智能领军企业",
+    "short_name": "贝谷",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#9C27B0",
+    "theme_color": "#9C27B0",
+    "description": "贝谷致力于利用AI技术，为教育行业带来革新性解决方案，赋能智慧教育新发展。",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

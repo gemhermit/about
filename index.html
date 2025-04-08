@@ -18,21 +18,80 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="贝谷致力于利用AI技术，为教育行业带来革新性解决方案，赋能智慧教育新发展。">
+  <meta name="keywords" content="贝谷,人工智能,AI,教育科技,智能题库,知洞,大模型,智慧教育">
+  <meta name="author" content="贝谷科技">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://about.bago.top/">
+  <meta pr/=operty="og:title" content="贝谷 - 人工智能领军企业">
+  <meta property="og:description" content="贝谷致力于利用AI技术，为教育行业带来革新性解决方案，赋能智慧教育新发展。">
+  <meta property="og:image" content="icons/Icon-512.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://about.bago.top/">
+  <meta property="twitter:title" content="贝谷 - 人工智能领军企业">
+  <meta property="twitter:description" content="贝谷致力于利用AI技术，为教育行业带来革新性解决方案，赋能智慧教育新发展。">
+  <meta property="twitter:image" content="icons/Icon-512.png">
+  
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="贝谷">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="about">
+  <meta name="apple-mobile-web-app-title" content="贝谷">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>about</title>
+  <title>贝谷 - 人工智能领军企业</title>
   <link rel="manifest" href="manifest.json">
+
+  <script>
+    // 动态更新页面元数据的函数，可以在Flutter中调用
+    function updateMetaTags(title, description) {
+      // 更新页面标题
+      document.title = title;
+      
+      // 更新描述
+      document.querySelector('meta[name="description"]').setAttribute('content', description);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', description);
+      document.querySelector('meta[property="twitter:title"]').setAttribute('content', title);
+      document.querySelector('meta[property="twitter:description"]').setAttribute('content', description);
+    }
+    
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "3771292655";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
